@@ -2,6 +2,10 @@ body {
   background-color: #16a085;
 }
 
+h1, h5 {
+  color: white;
+}
+
 .row {
     position: fixed;
     height: 360px;
