@@ -1,8 +1,12 @@
-.center {
-    position: absolute;
+body {
+  background-color: #16a085;
+}
+
+.row {
+    position: fixed;
     height: 360px;
     z-index: 15;
     top: 50%;
     margin-top: -180px;
-    background: red;
+    /*background: red;*/
 }

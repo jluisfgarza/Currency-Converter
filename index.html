@@ -13,34 +13,37 @@
 
 <body>
 
-    <div class="center">
+    <div class="row">
       <center><h1>Currency Converter</h1></center><br>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-xs-8 col-xs-offset-2">
-            <div class="form-group">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+              <div class="form-group">
                 <label class="sr-only" for="Amount">Amount</label>
                 <div class="input-group">
-                    <div class="input-group-addon">$</div>
-                    <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount" oninput="getRate(document.getElementById('currencya').value, document.getElementById('currencyb').value);">
-                    <select id="currencya" class="form-control" onclick="getRate(document.getElementById('currencya').value, document.getElementById('currencyb').value);"></select>
+                  <div class="input-group-addon">$</div>
+                  <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount" oninput="getRate(document.getElementById('currencya').value, document.getElementById('currencyb').value);">
+                  <select id="currencya" class="form-control" onclick="getRate(document.getElementById('currencya').value, document.getElementById('currencyb').value);"></select>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                <center>
+                  <button type="button" id="switch" class="btn btn-primary" onclick="switchcurrency(); getRate(document.getElementById('currencya').value, document.getElementById('currencyb').value);">Switch</button>
+                </center><br>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                <div class="form-group">
+                    <label class="sr-only" for="Amount">Amount</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                        <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount" readonly>
+                        <select id="currencyb" class="form-control" onclick="getRate(document.getElementById('currencya').value, document.getElementById('currencyb').value);"></select>
+                    </div>
                 </div>
             </div>
-            <center>
-                <button type="button" id="switch" class="btn btn-primary" onclick="switchcurrency(); getRate(document.getElementById('currencya').value, document.getElementById('currencyb').value);">Switch</button>
-            </center>
-            <br>
-            <div class="form-group">
-                <label class="sr-only" for="Amount">Amount</label>
-                <div class="input-group">
-                    <div class="input-group-addon">$</div>
-                    <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount" readonly>
-                    <select id="currencyb" class="form-control" onclick="getRate(document.getElementById('currencya').value, document.getElementById('currencyb').value);"></select>
-                </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
 
